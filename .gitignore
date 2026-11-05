@@ -1,0 +1,34 @@
+# Maven build output
+target/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# VS Code local settings
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Local application data
+data/
+*.tmp
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Maven Wrapper distribution cache
+.mvn/wrapper/dists/
