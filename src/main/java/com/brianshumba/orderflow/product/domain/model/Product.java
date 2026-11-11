@@ -96,4 +96,14 @@ public class Product {
     public boolean isActive() {
         return active;
     }
+
+    public String toString() {
+        return "Product{" +
+            "id=" + id +
+            ", sku='" + sku + '\'' +
+            ", name='" + name + '\'' +
+            ", price=" + price +
+            ", active=" + active +
+            '}';
+    }
 }
