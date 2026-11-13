@@ -24,6 +24,33 @@ public class Inventory {
         this.reservedQuantity = 0;
     }
 
+    private Inventory(
+        UUID productId,
+        int onHandQuantity,
+        int reservedQuantity
+    ) {
+        this(productId);
+
+        if (onHandQuantity < 0 ||
+            reservedQuantity < 0 ||
+            reservedQuantity > onHandQuantity) {
+            throw new InvalidStockOperationException(
+                "Invalid inventory quantities"
+            );
+        }
+
+        this.onHandQuantity = onHandQuantity;
+        this.reservedQuantity = reservedQuantity;
+    }
+
+    public Inventory copy() {
+        return new Inventory(
+            productId,
+            onHandQuantity,
+            reservedQuantity
+        );
+    }
+
     public void receiveStock(int quantity) {
         validatePositiveQuantity(quantity);
 

@@ -20,12 +20,13 @@ public class InMemoryInventoryRepository implements InventoryRepository {
 
         inventories.put(
             inventory.getProductId(),
-            inventory
+            inventory.copy()
         );
     }
 
     @Override
     public Optional<Inventory> findByProductId(UUID productId) {
-        return Optional.ofNullable(inventories.get(productId));
+        return Optional.ofNullable(inventories.get(productId))
+            .map(Inventory::copy);
     }
 }

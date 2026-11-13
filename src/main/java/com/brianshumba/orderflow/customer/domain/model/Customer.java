@@ -115,10 +115,10 @@ public class Customer {
     public String toString() {
         return "Customer{" +
             "id=" + id +
-            ", name='" + firstName + '\'' +
-            ", name='" + lastName + '\'' +
-            ", name='" + email + '\'' +
-            ", price=" + phone +
+            ", firstName='" + firstName + '\'' +
+            ", lastName='" + lastName + '\'' +
+            ", email='" + email + '\'' +
+            ", phone=" + phone +
             ", active=" + active +
             '}';
     }
